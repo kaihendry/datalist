@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<title>Browser datalist versus Suckless dmenu</title>
+<style>
+body { font-size: larger; }
+input { line-height: 2.5em; }
+</style>
+</head>
+<body>
+
+<p><a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element">Datalist element</a></p>
+
+<p><a href="https://caniuse.com/#feat=datalist">Can I use datalist?</a></p>
+
+<label>
+<a href="https://git.suckless.org/dmenu/tree/dmenu_path">dmenu_path</a>
+<input name=bin list=binaries>
+<datalist id=binaries>
+{{range . }}
+<option value="{{ . }}">{{end}}
+</datalist>
+</label>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<title>Browser datalist versus Suckless dmenu (polyfill)</title>
+<link rel="stylesheet" type="text/css" href="static/datalist.css" />
+<style>
+body { font-size: larger; }
+input { line-height: 2.5em; }
+</style>
+</head>
+<body>
+
+<p><a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element">Datalist element</a></p>
+
+<p><a href="https://caniuse.com/#feat=datalist">Can I use datalist?</a></p>
+
+<label for="os">OS: </label>
+<input type="text" placeholder="Select OS..." value="" list="list" name="os" id="os" class="datalist" /><br/>
+
+<datalist class="datalist" id="list">
+{{range . }}
+<option>{{ . }}</option>{{end}}
+</datalist>
+
+<p>Using <a href="https://git.codemadness.org/jscancer/file/datalist/README.html">Polyfill</a></p>
+
+<script type="text/javascript" src="static/datalist.js"></script>
+
+</body>
+</html>

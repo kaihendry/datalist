@@ -1,0 +1,10 @@
+{
+	"name": "datalist",
+	"profile": "mine",
+	"regions": ["ap-southeast-1"],
+	"stages": {
+		"production": {
+			"domain": "dl.natalian.org"
+		}
+	}
+}
