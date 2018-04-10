@@ -44,5 +44,9 @@ func get(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	bins := strings.Split(string(content), "\n")
-	t.ExecuteTemplate(w, "polyfill.html", bins)
+	if r.URL.Query().Get("polyfill") != "" {
+		t.ExecuteTemplate(w, "polyfill.html", bins)
+	} else {
+		t.ExecuteTemplate(w, "index.html", bins)
+	}
 }
